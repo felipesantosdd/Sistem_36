@@ -6,7 +6,7 @@ background-image: url("https://c.wallhere.com/photos/ef/f9/space_stars-59404.jpg
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   display: flex;
   flex-direction: column;

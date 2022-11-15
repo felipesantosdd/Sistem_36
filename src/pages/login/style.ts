@@ -27,19 +27,3 @@ export const FormInput = styled.input`
   color: black;
 `;
 
-
-export const Button = styled.button`
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 12px 33px;
-gap: 10px;
-width: 132px;
-height: 48px;
-background: #4B2E59;
-color: white;
-border: none;
-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  `;
-

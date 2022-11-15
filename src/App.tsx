@@ -1,13 +1,16 @@
 import Global from './styles/global';
 import { App } from './styles/style';
-import { LoginPage } from './pages/login';
+import { MainRoutes } from './routes';
+import { Provider } from './context';
 
 function Systeam36() {
   return (
-    <App>
-      <Global/>
-      <LoginPage />
-    </App>
+    <Provider>
+      <App>
+        <Global />
+        <MainRoutes />
+      </App>
+    </Provider>
 
 
 
