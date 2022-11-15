@@ -11,7 +11,7 @@ letter-spacing: 2px;
 font-size: 20px;
 text-transform: uppercase;
 font-style: oblique;
-color: #202224;
+color: white;
 `
 
 export const Toast = styled.p`
@@ -28,7 +28,6 @@ margin-bottom: 15px;
 `;
 
 export const ButtonText = styled.p`
-width: 66px;
 height: 24px;
 font-family: 'Tenor Sans';
 font-style: normal;
