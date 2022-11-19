@@ -2,11 +2,28 @@ import styled from "styled-components"
 
 export const CardContainer = styled.div`
 width: 240px;
-height: 300px;
+height: 400px;
 margin: 2%;
-padding: 2%;
+display: flex;
+flex-direction: column;
+padding-top: 0.5%;
+align-items: center;
 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 backdrop-filter: blur(50px);
+border-radius: 10px;
+`
+
+export const CardBox = styled.div`
+width: 95%;
+height: 300px;
+background-repeat: no-repeat;
+background-size: cover;
+border-radius: 15px;
+`
+
+export const CardImg = styled.img`
+width: 100%;
+border-radius: 10px;
 `

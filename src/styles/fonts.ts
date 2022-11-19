@@ -42,3 +42,25 @@ order: 0;
 flex-grow: 0;
 `
 
+export const CardTitle = styled.p`
+font-family: 'Tenor Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 18px;
+line-height: 30px;
+letter-spacing: 2.5px;
+text-transform: uppercase;
+color: white;
+margin-top: 10px;
+`
+
+export const CardDescription = styled.p`
+font-family: 'Tenor Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+color: #555555;
+text-shadow: black 1px 1px 0px;
+`
