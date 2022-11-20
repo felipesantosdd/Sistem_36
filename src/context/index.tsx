@@ -1,7 +1,8 @@
 import { AxiosError } from "axios";
 import { createContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { IContextProps, IErrors, ILoginData, IProduct, IProviderType, IUser } from "../interface";
+import { IClients, IContextProps, IErrors, ILoginData, IProduct, IProviderType, IUser } from "../interface";
+import { GetClientsService } from "../services/clients";
 import { LoginService } from "../services/login";
 import { ProduuctsService } from "../services/products";
 
@@ -14,6 +15,8 @@ export function Provider({ children }: IProviderType) {
     const [user, setUser] = useState<IUser>({} as IUser)
 
     const [products, serProducts] = useState<IProduct[]>([])
+
+    const [clients, setClients] = useState<IClients[]>([])
 
     const navigateTo = useNavigate()
 
@@ -42,6 +45,16 @@ export function Provider({ children }: IProviderType) {
         }
     }
 
+    async function getClients() {
+        try {
+            const Response: IClients[] = await GetClientsService()
+            setClients(Response)
+        } catch (error) {
+            const Errors = error as AxiosError<IErrors>
+            console.log(Errors);
+        }
+    }
+
     return (
         <Context.Provider value={{
             user,
@@ -50,7 +63,10 @@ export function Provider({ children }: IProviderType) {
             login,
             navigateTo,
             getProducts,
-            serProducts
+            serProducts,
+            clients,
+            setClients,
+            getClients
         }}>{children}</Context.Provider>
     )
 }

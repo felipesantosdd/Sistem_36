@@ -10,6 +10,9 @@ export interface IContextProps {
     login(data: ILoginData): Promise<void>;
     navigateTo: NavigateFunction;
     getProducts(): Promise<void>;
+    clients: IClients[];
+    setClients: React.Dispatch<React.SetStateAction<IClients[]>>
+    getClients(): Promise<void>
 }
 
 export interface IProviderType {
@@ -49,6 +52,20 @@ export interface IProduct {
     type: string;
     color: string;
     availability: [];
+}
+
+export interface IClients {
+    id: number;
+    name: string;
+    cpf: number;
+    whatzap: number;
+    address: {
+        City: string;
+        district: string;
+        road: string;
+        number: number;
+    };
+    contracts: []
 }
 
 export const imgProps = {
