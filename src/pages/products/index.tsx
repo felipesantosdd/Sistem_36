@@ -1,4 +1,5 @@
 import { useContext, useEffect } from "react";
+import { AddButton } from "../../components/buttons/style";
 import { Card } from "../../components/card";
 import { Header } from "../../components/header";
 import { Context } from "../../context";
@@ -27,7 +28,9 @@ export function ProductsPage() {
                         type={ele.type}
                         availability={ele.availability}
                     />)}
+                <AddButton />
             </AllCards>
+
         </>
     )
 }

@@ -1,13 +1,19 @@
+
 import { Header } from "../../components/header";
-import { Title } from "../../styles/fonts";
+import { ModalContainer } from "../../components/modal/style";
 
 export function DashboardPages() {
 
     return (
 
         <>
-            <Header />
-            <Title>Aqui vai o Dashboard</Title>
+            <Header></Header>
+            <ModalContainer>
+                <h2>Modal</h2>
+                <input type="text" placeholder="Peimrio Input" />
+                <input type="text" placeholder="Segundo Input" />
+                <button type="submit">Enviar</button>
+            </ModalContainer>
         </>
 
     )

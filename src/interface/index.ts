@@ -55,7 +55,6 @@ export interface IProduct {
 }
 
 export interface IClients {
-    id: number;
     name: string;
     cpf: number;
     whatzap: number;
